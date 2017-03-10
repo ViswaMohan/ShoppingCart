@@ -6,6 +6,7 @@ package com.viswa.tdd.shopping.cart;
 
 import org.junit.Test;
 import static org.junit.Assert.*;
+import org.junit.Before;
 
 /**
  *
@@ -16,6 +17,12 @@ public class ShoppingCartTest {
     public ShoppingCartTest() {
     }
     
+    private ShoppingCartImpl checkoutSystem;
+
+    @Before
+    public void setUp() throws Exception {
+        checkoutSystem = new ShoppingCartImpl();
+    }
     
     // TODO add test methods here.
     // The methods must be annotated with annotation @Test. For example:
