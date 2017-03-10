@@ -23,4 +23,6 @@ Navigate to project root directory and use the following tasks
 
 
 to build: ./gradlew build will build the project jar
+
+
 to test: ./gradlew test compiles the project and run the tests
