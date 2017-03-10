@@ -1,6 +1,6 @@
 /*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * This class is the ShoppingCart test class
+ * 
  */
 package com.viswa.tdd.shopping.cart;
 
