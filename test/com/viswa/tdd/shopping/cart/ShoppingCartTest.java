@@ -35,4 +35,19 @@ public class ShoppingCartTest {
         
     }
     
+    @Test
+    public void shouldPrintReceiptForShoppingCartContainingOrangesAfter3For2Offer() throws Exception {
+        assertEquals("1 Orange", checkoutSystem.printReceipt(asList("Orange")), "£0.25");
+        assertEquals("2 Orange", checkoutSystem.printReceipt(asList("Orange", "Orange")),"£0.50");
+        assertEquals("3 Orange", checkoutSystem.printReceipt(asList("Orange", "Orange","Orange")), "£0.50");
+        assertEquals("4 Orange", checkoutSystem.printReceipt(asList("Orange", "Orange","Orange","Orange")),"£0.75");
+    }
+
+    @Test
+    public void shouldPrintReceiptForShoppingCartContainingApplesAndOrangesAfterOffers() throws Exception {
+        assertEquals("2 Apple, 1 Orange", checkoutSystem.printReceipt(asList("Apple", "Apple", "Orange")), "£0.85");
+        assertEquals("2 Apple, 3 Oranges", checkoutSystem.printReceipt(asList("Apple", "Apple", "Orange", "Orange", "Orange")), "£1.10");
+    }
+
+    
 }

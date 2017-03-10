@@ -21,6 +21,20 @@ public class ShoppingCartImpl {
     private static final String APPLE_CODE = "Apple";
     private static final String ORANGE_CODE = "Orange";   
    
+   public int apply2(Integer[] itemsCost) {
+
+        int numberOfItems = itemsCost.length;
+            
+        if(numberOfItems==0){
+            return 0;
+        }
+        if (numberOfItems >=3)
+            return (numberOfItems -(numberOfItems /3)) * itemsCost[0];
+        else 
+            return (numberOfItems %3)* itemsCost[0];
+    }
+   
+   
    public int apply1(Integer[] itemsCost) {
         int numberOfItems = itemsCost.length;
         System.out.println("no of items: "+numberOfItems);
