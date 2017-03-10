@@ -16,7 +16,11 @@ The shop decides to introduce two new offers
 buy one, get one free on Apples
 3 for the price of 2 on Oranges
 
+
 How to build
+
 Navigate to project root directory and use the following tasks
+
+
 to build: ./gradlew build will build the project jar
 to test: ./gradlew test compiles the project and run the tests
