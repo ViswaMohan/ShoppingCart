@@ -4,9 +4,11 @@
  */
 package com.viswa.tdd.shopping.cart;
 
-import org.junit.Test;
-import static org.junit.Assert.*;
 import org.junit.Before;
+import org.junit.Test;
+
+import static java.util.Arrays.asList;
+import static org.junit.Assert.assertEquals;
 
 /**
  *
@@ -24,9 +26,13 @@ public class ShoppingCartTest {
         checkoutSystem = new ShoppingCartImpl();
     }
     
-    // TODO add test methods here.
-    // The methods must be annotated with annotation @Test. For example:
-    //
-    // @Test
-    // public void hello() {}
+    @Test
+    public void shouldPrintReceiptForShoppingCartContainingApplesAfterBuyOneGetOneOffer() throws Exception {
+       
+        assertEquals("1 Apple", checkoutSystem.printReceipt(asList("Apple")),"£0.60");
+        assertEquals("2 Apple", checkoutSystem.printReceipt(asList("Apple","Apple")),"£0.60");
+        assertEquals("3 Apple", checkoutSystem.printReceipt(asList("Apple", "Apple", "Apple")),"£1.20");
+        
+    }
+    
 }
